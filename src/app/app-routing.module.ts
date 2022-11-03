@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'persona',
+    loadChildren: () => import('./pages/persona/persona.module').then( m => m.PersonaPageModule)
+  },
+  {
+    path: 'edad',
+    loadChildren: () => import('./pages/edad/edad.module').then( m => m.EdadPageModule)
+  },
+  {
+    path: 'pais',
+    loadChildren: () => import('./pages/pais/pais.module').then( m => m.PaisPageModule)
+  },
+  {
+    path: 'clima',
+    loadChildren: () => import('./pages/clima/clima.module').then( m => m.ClimaPageModule)
+  },
 ];
 
 @NgModule({
